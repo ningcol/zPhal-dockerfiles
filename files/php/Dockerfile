@@ -1,5 +1,5 @@
 FROM php:7.2-fpm
-LABEL maintainer="gzp@goozp.com"
+LABEL maintainer="me@ningcol.com"
 
 
 # set timezome
@@ -28,12 +28,12 @@ COPY ./pkg/cphalcon.tar.gz /home/cphalcon.tar.gz
 RUN pecl install /home/redis.tgz && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
 
 # Install Phalcon extensions
-RUN cd /home \
-    && tar -zxvf cphalcon.tar.gz \
-    && mv cphalcon-* phalcon \
-    && cd phalcon/build \
-    && ./install \
-    && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/phalcon.ini
+#RUN cd /home \
+#    && tar -zxvf cphalcon.tar.gz \
+#    && mv cphalcon-* phalcon \
+#    && cd phalcon/build \
+#    && ./install \
+ #   && echo "extension=phalcon.so" > /usr/local/etc/php/conf.d/phalcon.ini
 
 # Install Composer
 ENV COMPOSER_HOME /root/composer

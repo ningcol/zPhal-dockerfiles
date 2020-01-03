@@ -30,6 +30,7 @@ services:
     ports:
       - "80:80"
       - "8080:8080"
+      - "8122:8122"
       - "443:443"
     restart: always
     command: nginx -g 'daemon off;'

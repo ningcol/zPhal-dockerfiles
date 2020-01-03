@@ -1,5 +1,5 @@
-FROM nginx:1.12
-LABEL maintainer="gzp@goozp.com"
+FROM nginx:1.76
+LABEL maintainer="me@ningcol.com"
 
 # set timezome
 ENV TZ=Asia/Shanghai
