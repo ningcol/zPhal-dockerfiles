@@ -36,8 +36,10 @@ git clone git@github.com:ZpGuo/zPhal-dockerfiles.git
 cd zPhal-dockerfiles/files
 
 wget https://pecl.php.net/get/redis-3.1.6.tgz -O php/pkg/redis.tgz  
-~~wget https://codeload.github.com/phalcon/cphalcon/tar.gz/v3.3.1 -O php/pkg/cphalcon.tar.gz~~ 没用到
+wget https://codeload.github.com/phalcon/cphalcon/tar.gz/v3.3.1 -O php/pkg/cphalcon.tar.gz
 ```
+~~wget https://codeload.github.com/phalcon/cphalcon/tar.gz/v3.3.1 -O php/pkg/cphalcon.tar.gz~~
+
 
 ### 4.docker-compose 构建项目
 进入 docker-compose.yml 所在目录：
