@@ -1,4 +1,4 @@
-FROM nginx:1.76
+FROM nginx:1.17.6
 LABEL maintainer="me@ningcol.com"
 
 # set timezome
