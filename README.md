@@ -2,7 +2,7 @@
 dockerfiles that support zPhal's working environment
 
 ## 简介
-用 Docker 容器服务的方式搭建 zPhal 环境，易于维护、升级。使用前需了解 Docker 的基本概念，常用基本命令。
+用 Docker 容器服务的方式搭建 TP 环境，易于维护、升级。使用前需了解 Docker 的基本概念，常用基本命令。
 可以一条条命令执行docker命令来构建镜像，容器。这里推荐使用 docker-compose 来管理，执行项目，下面是使用流程。
 
 相关软件版本：
@@ -11,9 +11,8 @@ dockerfiles that support zPhal's working environment
 - Nginx 1.76
 - Redis 3.2
 
-用到的 PHP 拓展(2018.2.9更新)：
+用到的 PHP 拓展：
 - redis 3.1.4
-- ~~Phalcon 3.3.1~~
 
 ## 使用
 ### 1.安装 Docker，Docker-compose  
@@ -39,9 +38,7 @@ git clone https://github.com/ningcol/zPhal-dockerfiles.git
 cd zPhal-dockerfiles/files
 
 wget https://pecl.php.net/get/redis-3.1.6.tgz -O php/pkg/redis.tgz  
-wget https://codeload.github.com/phalcon/cphalcon/tar.gz/v3.3.1 -O php/pkg/cphalcon.tar.gz
 ```
-~~wget https://codeload.github.com/phalcon/cphalcon/tar.gz/v3.3.1 -O php/pkg/cphalcon.tar.gz~~
 
 
 ### 4.docker-compose 构建项目
@@ -80,4 +77,10 @@ docker-compose run --rm -w /data/www/zPhal php-fpm composer update
 cd zPhal-dockerfiles/app
 
 docker run -it --rm -v `pwd`:/data/www/ -w /data/www/zPhal files_php-fpm composer update
+```
+### 6. 单独部署TP
+直接把tp项目放在app下面，修改nginx中root为public路径。
+如果用到runtime目录，则需要开放目录权限，我这里直接
+```
+chmod -R 777 runtime
 ```
