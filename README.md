@@ -8,12 +8,12 @@ dockerfiles that support zPhal's working environment
 相关软件版本：
 - PHP 7.2
 - MySQL 5.7
-- Nginx 1.12
+- Nginx 1.76
 - Redis 3.2
 
 用到的 PHP 拓展(2018.2.9更新)：
 - redis 3.1.4
-- Phalcon 3.3.1
+~~- Phalcon 3.3.1~~
 
 ## 使用
 ### 1.安装 Docker，Docker-compose  
@@ -26,7 +26,7 @@ sudo pip install -U docker-compose
 ### 2.下载 zPhal-dockerfiles
 直接 clone：
 ```
-git clone git@github.com:ZpGuo/zPhal-dockerfiles.git
+git clone git@github.com:ningcol/zPhal-dockerfiles.git
 ```
 或者下载 zip 压缩包也可以。
 
