@@ -22,7 +22,7 @@ RUN apt-get update && apt-get install -y \
 
 # Copy extensions had downloaded
 COPY ./pkg/redis.tgz /home/redis.tgz
-COPY ./pkg/cphalcon.tar.gz /home/cphalcon.tar.gz
+#COPY ./pkg/cphalcon.tar.gz /home/cphalcon.tar.gz
 
 # Install PECL extensions (Redis)
 RUN pecl install /home/redis.tgz && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
